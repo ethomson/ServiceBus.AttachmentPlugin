@@ -18,8 +18,8 @@ jobs:
         with:
           node-version: '12'
       - run: npm install -g azurite
-      - shell: cmd
-        run: start /B azurite-blob
+      - shell: bash
+        run: azurite-blob &
         
       - shell: cmd
         name: trying http://127.0.0.1:10000
